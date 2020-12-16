@@ -81,6 +81,30 @@ class SocketServer {
     this.ws.close()
   }
 
+  // 获取当前连接状态
+  getState() {
+    // 0	CONNECTING	.
+    // 1	OPEN	.
+    // 2	CLOSING	.
+    // 3	CLOSED	.
+    return this.ws.readyState
+  }
+
+  // 设置ws路径
+  setUrl(url) {
+    this._url = url
+  }
+
+  // 设置消息提示的方法
+  setRemind(remind) {
+    this._remind = remind
+  }
+
+  // 设置重连次数
+  setCount(count) {
+    this._count = count
+  }
+
   // _reconnect 重连
   _reconnect() {
     let that = this
