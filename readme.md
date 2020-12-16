@@ -33,3 +33,7 @@ let wsRemind = new WSremind(option)
 |connect|链接ws|null|null|1.0.3|
 |send|向服务器推送消息|string|null|1.0.3|
 |close|断开链接|null|null|1.0.3|
+|getState|获取当前连接状态|null|0-connect,1-open（连接中）,2-closeing,3-closed（断开）;|1.0.3|
+|setUrl|设置ws路径|String|null|1.0.3|
+|setRemind|设置消息提示的方法|Function|null|1.0.3|
+|setCount|设置重连次数|Number|null|1.0.3|
